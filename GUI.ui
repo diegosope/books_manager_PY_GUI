@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>804</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>804</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>804</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Books Manager</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/bookshelf-icon.png</normaloff>img/bookshelf-icon.png</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color:#3a322b;
+border-bottom: 500px solid #ece5d5;</string>
+  </property>
+  <widget class="QWidget" name="form">
+   <widget class="QTabWidget" name="pantalla">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>30</y>
+      <width>821</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabBar::tab{
+background-color:#3a322b;
+color:#39a8cd; 
+padding-top: 10%;padding-bottom: 10%;padding-left:39%;padding-right:40%;
+border-style: solid;border-width:4px;
+}
+
+QTabBar::tab:hover{
+background-color:#615348;
+color:#39a8cd; 
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>📚️ LIBROS</string>
+     </attribute>
+     <widget class="QTableWidget" name="tabla_libros">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>781</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QHeaderView::section{
+background-color:#39a8cd;
+color:#3a322b;
+font-weight: bold;
+padding:2px;
+}
+QTableWidget{
+gridline-color:#39a8cd;
+}
+
+</string>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustIgnored</enum>
+      </property>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>32</number>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>TÍTULO</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AUTOR</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>GÉNERO</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>EDITORIAL</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>PÁGINAS</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>PRECIO</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>LEÍDO</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="bt_cargar">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>480</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:#3a322b;
+color:#39a8cd; 
+
+}
+QPushButton:hover{
+background-color:#615348;
+color:#39a8cd; 
+font-weight: bold;
+}</string>
+      </property>
+      <property name="text">
+       <string>CARGAR</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>🔎 BUSCADOR</string>
+     </attribute>
+     <widget class="QTableWidget" name="tabla_buscar">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>781</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QHeaderView::section{
+background-color:#39a8cd;
+color:#3a322b;
+font-weight: bold;
+padding:2px;
+}
+QTableWidget{
+gridline-color:#39a8cd;
+}
+
+</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>TÍTULO</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AUTOR</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>GÉNERO</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>EDITORIAL</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>PÁGINAS</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>PRECIO</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>LEÍDO</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="bt_buscar">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>480</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:#3a322b;
+color:#39a8cd; 
+
+}
+QPushButton:hover{
+background-color:#615348;
+color:#39a8cd; 
+font-weight: bold;
+}</string>
+      </property>
+      <property name="text">
+       <string>BUSCAR</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tituloB">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>480</y>
+        <width>581</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>480</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+</string>
+      </property>
+      <property name="text">
+       <string>TÍTULO :</string>
+      </property>
+     </widget>
+     <zorder>tabla_buscar</zorder>
+     <zorder>bt_buscar</zorder>
+     <zorder>label</zorder>
+     <zorder>tituloB</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>📝 AÑADIR </string>
+     </attribute>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>310</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>PÁGINAS :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>360</y>
+        <width>71</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>PRECIO :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>410</y>
+        <width>71</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>LEÍDO :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>80</y>
+        <width>91</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>TÍTULO :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>190</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>GÉNERO :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>140</y>
+        <width>71</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>AUTOR :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>250</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>EDITORIAL :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tituloA">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>100</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_anadir">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>480</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:#3a322b;
+color:#39a8cd; 
+
+}
+QPushButton:hover{
+background-color:#615348;
+color:#39a8cd; 
+font-weight: bold;
+}</string>
+      </property>
+      <property name="text">
+       <string>AÑADIR</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>531</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:#39a8cd; 
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>Introduce los datos para añadir un libro :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="autorA">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>150</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="generoA">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>200</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editorialA">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>260</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="paginasA">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>320</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="precioA">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>380</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="leidoA">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>430</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>🔄 ACTUALIZAR</string>
+     </attribute>
+     <widget class="QLineEdit" name="titulo_actualizar">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>100</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>410</y>
+        <width>71</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>LEÍDO :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>360</y>
+        <width>71</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>PRECIO :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>591</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:#39a8cd; 
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>Introduce los datos para actualizar un libro :</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_actualizar">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>480</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:#3a322b;
+color:#39a8cd; 
+
+}
+QPushButton:hover{
+background-color:#615348;
+color:#39a8cd; 
+font-weight: bold;
+}</string>
+      </property>
+      <property name="text">
+       <string>ACTUALIZAR</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>190</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>GÉNERO :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>310</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>PÁGINAS :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>250</y>
+        <width>91</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>EDITORIAL :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>140</y>
+        <width>71</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>AUTOR :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>80</y>
+        <width>91</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 50, 43);
+font-weight:bold;
+</string>
+      </property>
+      <property name="text">
+       <string>TÍTULO :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>470</y>
+        <width>351</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:#39a8cd; 
+font-weight:bold;
+color: rgb(58, 50, 43);</string>
+      </property>
+      <property name="text">
+       <string>*Introduce el Título del libro a actualizar* :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="autor_actualizar">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>150</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="genero_actualizar">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>200</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editorial_actualizar">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>260</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="paginas_actualizar">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>320</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="precio_actualizar">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>380</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="leido_actualizar">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>430</y>
+        <width>621</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="titulo_a_actualizar">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>480</y>
+        <width>351</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>❌ BORRAR </string>
+     </attribute>
+     <widget class="QTableWidget" name="tabla_borrar">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>781</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QHeaderView::section{
+background-color:#39a8cd;
+color:#3a322b;
+font-weight: bold;
+padding:2px;
+}
+QTableWidget{
+gridline-color:#39a8cd;
+}
+
+</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>TÍTULO</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AUTOR</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>GÉNERO</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>EDITORIAL</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>PÁGINAS</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>PRECIO</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>LEÍDO</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLineEdit" name="titulo_a_borrar">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>480</y>
+        <width>351</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_28">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>470</y>
+        <width>331</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:#39a8cd; 
+font-weight:bold;
+color: rgb(58, 50, 43);</string>
+      </property>
+      <property name="text">
+       <string>*Introduce el título del libro a borrar* :</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_borrar">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>480</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:#3a322b;
+color:#39a8cd; 
+
+}
+QPushButton:hover{
+background-color:#615348;
+color:#39a8cd; 
+font-weight: bold;
+}</string>
+      </property>
+      <property name="text">
+       <string>BORRAR</string>
+      </property>
+     </widget>
+     <zorder>label_28</zorder>
+     <zorder>bt_borrar</zorder>
+     <zorder>titulo_a_borrar</zorder>
+     <zorder>tabla_borrar</zorder>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
