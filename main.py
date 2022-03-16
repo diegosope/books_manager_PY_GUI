@@ -21,9 +21,7 @@ from sqlite3 import *
 from sqlite3 import connect
 import sqlite3
 
-#from PySide6 import *
  
-
 class Registro_datos():
 
     def __init__(self):
@@ -50,7 +48,6 @@ class Registro_datos():
         return tituloX
 
 
-
 	#Delete a la Tabla libreria
     def elimina_libros(self,TITULO):
         cur = self.conn.cursor()
@@ -60,6 +57,7 @@ class Registro_datos():
         self.conn.commit()    
         cur.close()
         return a
+
 
 class Registro_datos2():
 	def __init__(self):
@@ -74,6 +72,7 @@ class Registro_datos2():
 		cur.execute(sql)
 		self.conn.commit()    
 		cur.close()
+
 
 class Registro_datos3():
 	def __init__(self):
@@ -99,6 +98,7 @@ class Registro_datos3():
 		cur.close()     
 		return tituloX
 		
+
 class MiApp(QtWidgets.QMainWindow,QtCore.QObject):
 	def __init__(self):
 		super().__init__()
@@ -134,6 +134,7 @@ class MiApp(QtWidgets.QMainWindow,QtCore.QObject):
 			self.ui.tabla_libros.setItem(tablerow,6,QtWidgets.QTableWidgetItem(row[7]))
 			
 			tablerow +=1
+
 
 	def buscar_libro(self): # BUSCADOR  
 		titulo_libro = self.ui.tituloB.text()
@@ -195,7 +196,7 @@ class MiApp(QtWidgets.QMainWindow,QtCore.QObject):
 		self.ui.precioA.clear()
 		self.ui.leidoA.clear()
 
-	
+
 	def modificar_libros(self):
 		titulo_a_actualizar = self.ui.titulo_a_actualizar.text() 
 		titulo_a_actualizar = str("'" + titulo_a_actualizar + "'")
@@ -230,6 +231,7 @@ class MiApp(QtWidgets.QMainWindow,QtCore.QObject):
 		
 
 	
+#BAR CVRPR JN, WVGFHMNV FHEH!!!
 
 appp = QtWidgets.QApplication(sys.argv)
 window = MiApp()
